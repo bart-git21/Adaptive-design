@@ -187,7 +187,7 @@ p {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Global styles */
     :root {
-      --fontSize: 16px;
+      --fontSize: 14px;
       --defaultSize: 30px;
       --defaultPercentage: 50%;
   }
@@ -206,7 +206,7 @@ p {
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
   /* Global styles */
     :root {
-      --fontSize: 18px;
+      --fontSize: 16px;
       --defaultSize: 40px;
       --defaultPercentage: 60%;
   }
@@ -225,7 +225,7 @@ p {
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
 /* Global styles */
     :root {
-      --fontSize: 20px;
+      --fontSize: 16px;
       --defaultSize: 50px;
       --defaultPercentage: 70%;
   }
@@ -244,7 +244,7 @@ body {
 @media only screen and (min-width: 1440px) and (max-width: 1680px) {
 /* Global styles */
     :root {
-      --fontSize: 22px;
+      --fontSize: 16px;
       --defaultSize: 60px;
       --defaultPercentage: 80%;
   }
@@ -263,7 +263,7 @@ body {
 @media only screen and (min-width: 1680px) {
 /* Global styles */
     :root {
-      --fontSize: 24px;
+      --fontSize: 16px;
       --defaultSize: 70px;
       --defaultPercentage: 90%;
   }
