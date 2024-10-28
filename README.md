@@ -2,5 +2,5 @@
 
 ### Description:
 ```
-Only CSS file
+Use this CSS file for base adaptive design
 ```
