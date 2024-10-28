@@ -1,0 +1,279 @@
+/* Global styles */
+*,
+*::before,
+*::after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-size: var(--fontSize);
+}
+
+/* Header styles */
+header {
+  height: calc(2 * var(--defaultSize) + 10px);
+  padding: calc(var(--defaultSize) - 10px);
+
+  nav {
+    display: block;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    li {
+      margin-right: calc(var(--defaultSize) - 10px);
+    }
+  }
+}
+
+/* Main content styles */
+main {
+  padding: var(--defaultSize);
+
+  section {
+    margin-bottom: var(--defaultSize);
+  }
+
+  article {
+    padding: calc(var(--defaultSize) - 10px);
+  }
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  height: calc(2 * var(--defaultSize) + 10px);
+  padding: calc(var(--defaultSize) - 10px);
+}
+
+/* Button styles */
+button {
+  font-size: calc(var(--fontSize) + 2px);
+}
+
+/* Form styles */
+form {
+  padding: var(--defaultSize);
+
+  input[type="text"], input[type="email"] {
+    width: var(--defaultPercentage);
+    padding: calc(var(--defaultSize)  / 2);
+    margin-bottom: var(--defaultSize);
+  }
+
+  textarea {
+    width: var(--defaultPercentage);
+    padding: calc(var(--defaultSize)  / 2);
+    margin-bottom: var(--defaultSize);
+  }
+}
+
+/* Image styles */
+img {
+  width: var(--defaultPercentage);
+  height: auto;
+}
+
+/* Other styles */
+.container {
+  padding: var(--defaultSize);
+}
+
+.row {
+  margin-bottom: var(--defaultSize);
+}
+
+.col {
+  padding: calc(var(--defaultSize) - 10px);
+}
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-gap: calc(var(--defaultSize) - 10px);
+
+  &-item {
+    background-color: #f7f7f7;
+    padding: calc(var(--defaultSize) - 10px);
+  }
+}
+
+/* Hero section styles */
+.hero {
+height: calc((var(--defaultSize) + 10px) * 10);
+background-image: url('hero-image.jpg');
+background-size: cover;
+background-position: center;
+
+h1 {
+    font-size: calc(var(--fontSize) * 2);
+    color: #fff;
+    }
+}
+
+/* Featured section styles */
+.featured {
+  padding: var(--defaultSize);
+  
+  h2 {
+    font-size: calc(var(--fontSize) * 2 - 4px);
+    color: #333;
+  }
+
+  p {
+    font-size: var(--fontSize);
+    color: #555;
+  }
+}
+
+/* Call-to-action section styles */
+.call-to-action {
+  padding: var(--defaultSize);
+
+  h2 {
+    font-size: calc(var(--fontSize) * 2 - 4px);
+    color: #333;
+  }
+
+  p {
+    font-size: var(--fontSize);
+    color: #555;
+  }
+}
+
+/* Testimonials section styles */
+.testimonials {
+padding: var(--defaultSize);
+
+h2 {
+    font-size: calc(var(--fontSize) * 2 - 4px);
+    color: #333;
+    }
+
+p {
+    font-size: var(--fontSize);
+    color: #555;
+    }
+}
+
+/* Small devices (phones) */
+@media only screen and (max-width: 768px) {
+    /* Global styles */
+  :root {
+      --fontSize: 14px;
+      --defaultSize: 20px;
+      --defaultPercentage: 100%;
+  }
+
+  body {
+    line-height: 1.2;
+  }
+
+  /* Header styles */
+  header nav {
+    display: none;
+
+    ul {
+        display: none;
+      }
+  }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Global styles */
+    :root {
+      --fontSize: 16px;
+      --defaultSize: 30px;
+      --defaultPercentage: 50%;
+  }
+
+  body {
+    line-height: 1.4;
+  }
+
+  /* Grid styles */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  /* Global styles */
+    :root {
+      --fontSize: 18px;
+      --defaultSize: 40px;
+      --defaultPercentage: 60%;
+  }
+
+  body {
+    line-height: 1.6;
+  }
+
+  /* Grid styles */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+/* Global styles */
+    :root {
+      --fontSize: 20px;
+      --defaultSize: 50px;
+      --defaultPercentage: 70%;
+  }
+
+body {
+    line-height: 1.8;
+  }
+
+  /* Grid styles */
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* XXL devices (extra large desktops) */
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+/* Global styles */
+    :root {
+      --fontSize: 22px;
+      --defaultSize: 60px;
+      --defaultPercentage: 80%;
+  }
+
+body {
+    line-height: 2.0;
+  }
+
+  /* Grid styles */
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* XXXL devices (4K desktops) */
+@media only screen and (min-width: 1680px) {
+/* Global styles */
+    :root {
+      --fontSize: 24px;
+      --defaultSize: 70px;
+      --defaultPercentage: 90%;
+  }
+
+  body {
+    line-height: 2.2;
+  }
+
+  /* Grid styles */
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
