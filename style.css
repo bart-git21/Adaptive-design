@@ -1,4 +1,7 @@
 /* Global styles */
+:root {
+    --font-size: 16px;
+}
 *,
 *::before,
 *::after{
@@ -9,6 +12,7 @@
 
 body{
     font-size: var(--fontSize);
+    background-color: white;
 }
 
 /* Header styles */
@@ -81,6 +85,8 @@ img {
 /* Other styles */
 .container {
   padding: var(--defaultSize);
+  display: flex;
+  flex-direction: row;
 }
 
 .row {
@@ -161,7 +167,7 @@ p {
 }
 
 /* Small devices (phones) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     /* Global styles */
   :root {
       --fontSize: 14px;
@@ -170,8 +176,14 @@ p {
   }
 
   body {
+    background-color: lightgrey;
     line-height: 1.2;
   }
+
+  .container {
+    flex-direction: column;
+    font-size: 12px;
+}
 
   /* Header styles */
   header nav {
@@ -184,10 +196,10 @@ p {
 }
 
 /* Medium devices (tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) {
   /* Global styles */
     :root {
-      --fontSize: 14px;
+      --fontSize: 16px;
       --defaultSize: 30px;
       --defaultPercentage: 50%;
   }
@@ -196,6 +208,10 @@ p {
     line-height: 1.4;
   }
 
+  .container {
+    flex-direction: column;
+}
+
   /* Grid styles */
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -203,16 +219,20 @@ p {
 }
 
 /* Large devices (desktops) */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   /* Global styles */
     :root {
-      --fontSize: 16px;
+      --fontSize: 18px;
       --defaultSize: 40px;
       --defaultPercentage: 60%;
   }
 
   body {
     line-height: 1.6;
+  }
+
+  .container {
+      flex-direction: row;
   }
 
   /* Grid styles */
@@ -222,10 +242,9 @@ p {
 }
 
 /* Extra large devices (large desktops) */
-@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+@media only screen and (min-width: 1280px) {
 /* Global styles */
     :root {
-      --fontSize: 16px;
       --defaultSize: 50px;
       --defaultPercentage: 70%;
   }
@@ -241,10 +260,9 @@ body {
 }
 
 /* XXL devices (extra large desktops) */
-@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+@media only screen and (min-width: 1440px) {
 /* Global styles */
     :root {
-      --fontSize: 16px;
       --defaultSize: 60px;
       --defaultPercentage: 80%;
   }
@@ -263,7 +281,6 @@ body {
 @media only screen and (min-width: 1680px) {
 /* Global styles */
     :root {
-      --fontSize: 16px;
       --defaultSize: 70px;
       --defaultPercentage: 90%;
   }
