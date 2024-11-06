@@ -13,6 +13,8 @@
 body{
     font-size: var(--fontSize);
     background-color: white;
+    /* reserve position for scrollbar. body will not change size when the scrollbar appears or disappears */
+    scrollbar-gutter: stable both-edges;
 }
 
 /* Header styles */
